@@ -16,14 +16,11 @@ This project provides the first publicly available highway abnormal parking even
 
 The following GIF animations demonstrate the detection process of vehicles transitioning from motion to stationary states at long distances. Green bounding boxes indicate moving vehicles, while red bounding boxes highlight stationary (parked) vehicles that are detected as abnormal parking events.
 
-### Examples
-
 <div align="center">
 
 | Event 1 | Event 2 |
 |:-------:|:-------:|
 | ![Stop Car Event 1](gif/stop_car_event1.gif) | ![Stop Car Event 2](gif/stop_car_event2.gif) |
-
 
 | Event 3 | Event 4 |
 |:-------:|:-------:|
