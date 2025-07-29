@@ -34,6 +34,21 @@ The following GIF animations demonstrate the detection process of vehicles trans
 - 📏 **Long-distance Detection**: Effective detection capability beyond 100 meters
 - 🎯 **Real-time Tracking**: Continuous monitoring of vehicle status changes
 
+## 📊 Dataset Comparison
+
+The following table presents a comparison of RoadTrack dataset with other existing datasets:
+
+| Dataset | Number of Videos | Number of Events | Long Distance |
+|---------|:----------------:|:----------------:|:-------------:|
+| HighD | 60 | N/A | × |
+| ISLab-PVD | 16 | 22 | × |
+| DAD | 668 | 620 | × |
+| **RoadTrack** | **1000** | **300** | **√** |
+
+**Our Advantages**
+- 📈 **Largest Scale**: 1000 video sequences, providing comprehensive coverage
+- 🎯 **Event Focus**: 300 abnormal parking events with detailed annotations
+- 🔭 **Long-distance Capability**: Unique focus on long-distance detection (>100m)
 
 
 ## 📁 Dataset Structure
