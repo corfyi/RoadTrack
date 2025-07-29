@@ -6,12 +6,38 @@ This project provides the first publicly available highway abnormal parking even
 
 ## 🚀 Key Contributions
 
-
 ###  Highway Abnormal Parking Event Dataset
 - **Dataset Scale**: 1,000 video sequences
 - **Data Distribution**: 200 abnormal event videos + 800 normal traffic videos
 - **Annotation Quality**: Provides detailed object detection and tracking annotations
 - **Research Value**: Provides standardized evaluation benchmarks for subsequent research
+
+## 🎬 Visualization
+
+The following GIF animations demonstrate the detection process of vehicles transitioning from motion to stationary states at long distances. Green bounding boxes indicate moving vehicles, while red bounding boxes highlight stationary (parked) vehicles that are detected as abnormal parking events.
+
+### Examples
+
+<div align="center">
+
+| Event 1 | Event 2 |
+|:-------:|:-------:|
+| ![Stop Car Event 1](gif/stop_car_event1.gif) | ![Stop Car Event 2](gif/stop_car_event2.gif) |
+
+
+| Event 3 | Event 4 |
+|:-------:|:-------:|
+| ![Stop Car Event 3](gif/stop_car_event3.gif) | ![Stop Car Event 4](gif/stop_car_event4.gif) |
+
+
+</div>
+
+- 🚗 **Green Boxes**: Moving vehicles being tracked
+- 🚨 **Red Boxes**: Stationary vehicles detected as abnormal parking events
+- 📏 **Long-distance Detection**: Effective detection capability beyond 100 meters
+- 🎯 **Real-time Tracking**: Continuous monitoring of vehicle status changes
+
+
 
 ## 📁 Dataset Structure
 
