@@ -1,8 +1,8 @@
-# RoadTrack: Highway Abnormal Parking Event Detection Dataset and Benchmarks
+# RoadTrack: Real-Time Distant Parking Detection via Visual Geometric Projection and Velocity Estimation
 
 ## 📖 Overview
 
-This project provides the first publicly available highway abnormal parking event dataset and baseline implementation. The dataset contains 1,000 video sequences, including 200 abnormal parking event videos and 800 normal traffic videos, providing a reliable training foundation and performance evaluation benchmark for highway abnormal event detection research.
+This project provides the first publicly available distant highway abnormal parking event dataset and baseline implementation. The dataset contains 1,000 video sequences, including 200 abnormal parking event videos and 800 normal traffic videos, providing a reliable training foundation and performance evaluation benchmark for highway abnormal event detection research.
 
 ## 🚀 Key Contributions
 
