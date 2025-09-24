@@ -97,11 +97,39 @@ opencv-python
 
 ## 🚀 Quick Start
 
+
 ### 1. Run Baseline Method
 
 ```bash
 python run_baseline.py
 ```
+
+
+### 2. Run RoadTrack Method
+
+```bash
+python run_roadtrack.py
+```
+
+### 3. Run YOLO Video Detection Demo
+
+
+We provide a demo script in the `yolo_detector` folder for object detection in videos using the YOLO model. The provided `yolo11m.pt` is the weight file used in our paper, and `video.mp4` is a sample test video from our dataset. For access to the complete video dataset, authorization is required.
+
+**Usage:**
+
+1. The `yolo_detector` directory already contains:
+   - `yolo11m.pt`: YOLO model weights used in our publication
+   - `video.mp4`: A sample test video from the RoadTrack dataset
+2. Run the demo script:
+
+	```bash
+	cd yolo_detector
+	python run_yolo_demo.py
+	```
+
+The script will process the sample video and display detection results in real time using OpenCV. You can press `q` to exit visualization.
+
 
 
 

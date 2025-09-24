@@ -108,7 +108,7 @@ def main():
 
     TP, TN, FP, latency_sum = 0, 0, 0, 0
 
-    for root_dir, eval_positive in [('datasets/P/', True)]:
+    for root_dir, eval_positive in [('datasets/P/', True), ('datasets/N/', False)]:
         for sample_name in sorted(os.listdir(root_dir)):
             tp1, tn1, fp1, latency = eval(sample_name, filter_data, root_dir, eval_positive)
             TP += tp1

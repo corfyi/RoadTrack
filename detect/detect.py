@@ -1,3 +1,4 @@
+import numpy as np
 
 def compute_iou(xyxy1,xyxy2):
     tlwh1 = [xyxy1[0], xyxy1[1], xyxy1[2] - xyxy1[0], xyxy1[3] - xyxy1[1]]
@@ -64,7 +65,46 @@ def detect_by_iou(tracker, max_frame_id, dets_by_frame):
                             anormal_tracks[t.id] = []
                         anormal_tracks[t.id].append((frame_id, (x1, y1, x2 - x1, y2 - y1), t.conf))
 
-                
-                
+    return anormal_tracks,anormal_frames
+
+
+
+def detect_by_speed(tracker,max_frame_id, dets_by_frame, pixel_ratio):
+
+    id_speed_count = {}
+    id_conf_record = {}
+    anormal_frames = {}
+    anormal_tracks = {}
+
+    for frame_id in range(1, max_frame_id + 1):
+        tracker.predict()
+        dets = dets_by_frame.get(frame_id, [])
+        tracker.update(dets)
+
+        for t in tracker.tracks:
+            if t.is_confirmed():
+                x1, y1, x2, y2 = t.get_bbox()      
+                vx, vy = t.get_speed()
+                speed = ((vx/pixel_ratio)**2 + (vy/pixel_ratio)**2)**0.5*3.6
+                if speed < 10:
+                    if t.id not in id_speed_count:
+                        id_speed_count[t.id] = 1
+                    else:
+                        id_speed_count[t.id] += 1
+                    if t.id not in id_conf_record:
+                        id_conf_record[t.id] = []
+                    id_conf_record[t.id].append(t.conf)
+                else:
+                    if t.id in id_speed_count:
+                        del id_speed_count[t.id]
+                if id_speed_count.get(t.id, 0) > 30:
+                    avg_conf = np.mean(id_conf_record[t.id])
+                    if avg_conf >= 0.2:
+                        if frame_id not in anormal_frames:
+                            anormal_frames[frame_id] = []
+                        anormal_frames[frame_id].append((x1, y1, x2-x1, y2-y1))
+                        if t.id not in anormal_tracks:
+                            anormal_tracks[t.id] = []
+                        anormal_tracks[t.id].append((frame_id, (x1, y1, x2-x1, y2-y1),t.conf))
 
     return anormal_tracks,anormal_frames
