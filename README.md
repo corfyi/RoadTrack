@@ -53,17 +53,27 @@ The following table presents a comparison of RoadTrack dataset with other existi
 
 ## 📁 Dataset Structure
 
+
+
 ```
 datasets/
-├── P/                          # Main dataset directory
+├── P/                          # Abnormal parking event videos
 │   ├── 04-12_09_K221_1953/     # Video sequence (date_time_road_frame format)
 │   │   └── data/
 │   │       ├── det/            # Object detection results
 │   │       └── gt/             # Ground truth annotations
-│   ├── 04-12_11_K249_680/
-│   ├── ...                     # More video sequences
-│   └── 06-10_20_K287_172/
+│   ├── ...                     # More abnormal event sequences
+├── N/                          # Normal traffic videos
+│   ├── 04-12_09_K221_1953/     # Video sequence (date_time_road_frame format)
+│   │   └── data/
+│   │       ├── det/            # Object detection results
+│   │       └── gt/             # Ground truth annotations
+│   ├── ...                     # More normal traffic sequences
 ```
+
+**Video Data Access:**
+To download the full RoadTrack video dataset, please apply for access via the following link:
+[Download RoadTrack Video Data](https://docs.google.com/forms/d/e/1FAIpQLSfexdOzSz_kMgp7_ctYRjfPOlfvNVoATGkg9ihLK-YoEvqlZQ/viewform)
 
 ### Data Format Description
 
