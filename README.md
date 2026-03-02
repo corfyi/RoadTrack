@@ -1,6 +1,8 @@
-# RoadTrack: Real-Time Distant Parking Detection via Visual Geometric Projection and Velocity Estimation
+# RoadTrack: Real-Time Distant Parking Detection via Visual Geometric Projection and Speed Estimation
 
 ## 📖 Overview
+
+This work has been published in *Signal, Image and Video Processing*.
 
 This project provides the first publicly available distant highway abnormal parking event dataset and baseline implementation. The dataset contains 1,000 video sequences, including 200 abnormal parking event videos and 800 normal traffic videos, providing a reliable training foundation and performance evaluation benchmark for highway abnormal event detection research.
 
@@ -170,8 +172,19 @@ Baseline method performance on test set:
 
 If you use this dataset or method in your research, please cite:
 
-```bibtex
+Yi K, Luo L, Xie C, et al. RoadTrack: Real-Time Distant Parking Detection via Visual Geometric Projection and Speed Estimation[J]. Signal, Image and Video Processing, 2026, 20(2): 79.
 
+```bibtex
+@article{yi2026roadtrack,
+  title={RoadTrack: Real-Time Distant Parking Detection via Visual Geometric Projection and Speed Estimation},
+  author={Yi, Kefu and Luo, Longbing and Xie, Chunlin and Zhu, Yufan and Tian, Yunyang},
+  journal={Signal, Image and Video Processing},
+  volume={20},
+  number={2},
+  pages={79},
+  year={2026},
+  publisher={Springer}
+}
 ```
 
 
